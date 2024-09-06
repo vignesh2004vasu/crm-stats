@@ -35,7 +35,7 @@ const chartConfig = {
 const CustomTick = (props: any) => {
   const { x, y, payload } = props;
   return (
-    <text x={x} y={y} textAnchor="middle" fill="hsl(var(--foreground))" fontSize={13}>
+    <text x={x} y={y} textAnchor="middle" fill="hsl(var(--))" fontSize={13}>
       {payload.value}
     </text>
   );

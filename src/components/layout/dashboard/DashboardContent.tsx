@@ -26,16 +26,9 @@ import InteractivePieChart from "./InteractivePieChart";
 import { CRMBarChart } from "@/components/layout/dashboard/CRMBarChart";
 import { CRMRadarChart } from "./CRMRadarChart";
 import { CRMLineChart } from "./CRMLineChart";
+import { CRMToolTip } from "./CRMToolTip";
+import { CRmRadialChart } from "./CRMRadialChart";
 
-// CRM data for Leads vs Conversions
-const lineData = [
-  { name: "Jan", leads: 150, conversions: 45 },
-  { name: "Feb", leads: 180, conversions: 55 },
-  { name: "Mar", leads: 200, conversions: 70 },
-  { name: "Apr", leads: 170, conversions: 60 },
-  { name: "May", leads: 220, conversions: 80 },
-  { name: "Jun", leads: 250, conversions: 90 },
-];
 
 const DashboardContent: React.FC = () => {
   const [timeWindow, setTimeWindow] = useState("1w");
@@ -88,6 +81,8 @@ const DashboardContent: React.FC = () => {
         <CRMLineChart/>
         <CRMBarChart />
         <CRMRadarChart />
+        <CRMToolTip/>
+        <CRmRadialChart/>
       </div>
     </div>
   );

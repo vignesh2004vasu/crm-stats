@@ -39,7 +39,7 @@ const chartData = [
 const chartConfig = {
   leads: {
     label: "Leads",
-    color: "hsl(var(--background))",
+    color: "hsl(var(--chart-1))",
   },
   dealsClosed: {
     label: "Deals Closed",
