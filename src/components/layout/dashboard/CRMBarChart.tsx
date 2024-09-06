@@ -43,7 +43,7 @@ const chartConfig = {
   },
   dealsClosed: {
     label: "Deals Closed",
-    color: "hsl(var(--background))",
+    color: "hsl(var(--chart-2))",
   },
   label: {
     color: "hsl(var(--background))",
