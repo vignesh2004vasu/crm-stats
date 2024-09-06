@@ -17,6 +17,7 @@
     "@types/three": "^0.168.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "crm-stats": "file:",
     "lucide-react": "^0.439.0",
     "next": "14.2.8",
     "react": "^18",
