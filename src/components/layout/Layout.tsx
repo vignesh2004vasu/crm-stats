@@ -16,7 +16,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-gray-800 text-white">
-        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <ul className="flex space-x-4">
             {navItems.map((item) => (
               <li key={item.href}>

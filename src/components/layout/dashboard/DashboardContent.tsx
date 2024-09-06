@@ -1,4 +1,4 @@
-"use client"; // src/components/dashboard/DashboardContent.tsx
+"use client"; 
 import React, { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -8,20 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  PolarAngleAxis,
-  PolarGrid,
-  Radar,
-  RadarChart,
-} from "recharts";
+
 import InteractivePieChart from "./InteractivePieChart";
 import { CRMBarChart } from "@/components/layout/dashboard/CRMBarChart";
 import { CRMRadarChart } from "./CRMRadarChart";

@@ -1,4 +1,3 @@
-// src/components/dashboard/CRMRadarChart.tsx
 import React from "react";
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts";
 import {
@@ -16,6 +15,7 @@ import {
   ChartContainer,
 } from "@/components/ui/chart";
 
+
 const chartData = [
   { metric: "Customer Satisfaction", value: 78 },
   { metric: "Net Promoter Score", value: 65 },
@@ -25,6 +25,7 @@ const chartData = [
   { metric: "Support Tickets Resolved", value: 80 },
 ];
 
+
 const chartConfig = {
   performance: {
     label: "Performance",
@@ -32,15 +33,27 @@ const chartConfig = {
   },
 };
 
-const CustomTick = (props: any) => {
+
+const DefaultTick = (props: {
+  x: number;
+  y: number;
+  payload: { value: string };
+}) => {
   const { x, y, payload } = props;
   return (
-    <text x={x} y={y} textAnchor="middle" fill="hsl(var(--))" fontSize={13}>
+    <text
+      x={x}
+      y={y}
+      textAnchor="middle"
+      fill="hsl(var(--foreground))"
+      fontSize={13}
+    >
       {payload.value}
     </text>
   );
 };
 
+// Radar chart component
 export function CRMRadarChart() {
   return (
     <Card>
@@ -55,13 +68,13 @@ export function CRMRadarChart() {
           config={chartConfig}
           className="mx-auto max-w-[500px] max-h-[500px]"
         >
-          <RadarChart data={chartData} width={500} height={500} >
+          <RadarChart data={chartData} width={500} height={500}>
             <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
             <PolarGrid className="fill-[--color-performance] opacity-20" />
-            <PolarAngleAxis dataKey="metric" tick={<CustomTick />} />
+            <PolarAngleAxis dataKey="metric" tick={DefaultTick} />
             <Radar
               dataKey="value"
               fill="var(--color-performance)"

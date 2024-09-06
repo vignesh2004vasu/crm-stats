@@ -20,7 +20,6 @@ import {
 
 export const description = "A line chart with dots"
 
-// CRM data: Leads vs Conversions by month
 const chartData = [
   { month: "January", leads: 150, conversions: 45 },
   { month: "February", leads: 180, conversions: 55 },
@@ -73,16 +72,15 @@ export function Component() {
             <Line
   dataKey="desktop"
   type="natural"
-  stroke="var(--color-desktop)"  // Correct stroke color
+  stroke="var(--color-desktop)"  
   strokeWidth={2}
-  dot={{ fill: "var(--color-desktop)" }}  // Dot fill color matches line stroke
+  dot={{ fill: "var(--color-desktop)" }}  
   activeDot={{ r: 6 }}
 />
 <Line
   dataKey="mobile"
   type="natural"
-  stroke="var(--color-mobile)"  // Ensure mobile line is also rendered
-  strokeWidth={2}
+  stroke="var(--color-mobile)"  
   dot={{ fill: "var(--color-mobile)" }}
   activeDot={{ r: 6 }}
 />
